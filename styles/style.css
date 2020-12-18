@@ -2,17 +2,19 @@ html,
 body {
     margin: 0;
     padding: 0;
-    background-color: #CCC;
+    background-color: #fbc021;
     font-family: Arial, Helvetica, sans-serif;
     height: 100%;
     width: 100%;
+    box-sizing: border-box;
 }
 
 article {
     margin: 0 auto;
-    background-color: #fbc021;
-    width: calc(100%);
-    height: calc(100%);
+    background-attachment: scroll;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
 }
 
 header {
@@ -22,55 +24,49 @@ header {
     font-size: 2em;
     padding: 10px 0px 10px 0px;
     height: 20%;
-    width: 100%;
-    border-bottom: 5px solid #FFF;
-}
-
-footer_left {
-    clear: both;
-    text-align: left;
-    color: #FFF;
-    font-size: 0.8em;
-    padding: 15px 5px;
-    border-top: 5px solid #FFF;
-    height: calc(10% - 35px);
-}
-
-footer_right {
-    clear: both;
-    text-align: left;
-    color: #FFF;
-    font-size: 0.8em;
-    padding: 15px 5px;
-    border-top: 5px solid #FFF;
-    height: calc(10% - 35px);
-}
-
-.banner_1st {
-    border-color: #000000;
-    border-style: solid;
-    border-radius: 26px 26px 26px 26px;
-}
-
-.banner_2nd {
-    border-color: #000000;
-    border-style: solid;
-    border-radius: 26px 26px 26px 26px;
-    width: calc(100% - 60px);
 }
 
 #esquerda {
     float: left;
     width: 12%;
+    height: 60%;
     padding: 0px 0px 0px 5px;
-    border-right: 5px solid #FFF;
 }
 
 #direita {
     float: right;
     padding: 0px 0px 0px 5px;
-    width: calc(92% - 100px);
-    border-left: 5px solid #FFF;
+    width: 87%;
+    height: 70%;
+    box-sizing: border-box;
+}
+
+.footer_left {
+    float: left;
+    clear: both;
+    text-align: left;
+    padding: 10px;
+    color: #FFF;
+    background: #232323;
+    font-size: 15px;
+    border-top: 5px solid #FFF;
+    box-sizing: border-box;
+    height: 7.90%;
+    width: 50%;
+}
+
+.footer_right {
+    float: right;
+    clear: both;
+    text-align: right;
+    padding: 10px;
+    color: #FFF;
+    background: #232323;
+    font-size: 15px;
+    border-top: 5px solid #FFF;
+    box-sizing: border-box;
+    height: 7.90%;
+    width: 50%;
 }
 
 .button_login {
@@ -110,6 +106,7 @@ footer_right {
     padding-left: 0;
     list-style-type: none;
     width: 125%;
+    box-sizing: border-box;
 }
 
 .vertical_menu a {
@@ -159,4 +156,14 @@ footer_right {
     list-style-type: none;
     text-align: center;
     word-spacing: 200px;
+}
+
+.banner_1st {
+    border-radius: 26px 26px 26px 26px;
+    width: calc(100% - 115px);
+}
+
+.banner_2nd {
+    border-radius: 26px 26px 26px 26px;
+    width: calc(100% - 60px);
 }
