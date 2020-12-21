@@ -23,7 +23,6 @@ body {
 }
 
 #banner {
-    border-radius: 5px 5px 5px 5px;
     width: 100%;
     box-shadow: 0px 1px 3px 2px rgba(50, 50, 50, 0.64);
 }
@@ -127,13 +126,8 @@ body {
     color: white;
 }
 
-#recipe_sugestion {
-    width: 100%;
-    padding: 10px 0px 0px 0px;
-    list-style-type: none;
-    text-align: center;
-    overflow: auto;
-    word-spacing: 150px;
+.back_grey {
+    background-color: #606060
 }
 
 #all_recipes {
@@ -144,17 +138,42 @@ body {
 #recipe {
     position: relative;
     word-wrap: break-word;
-    margin-top: 30px;
-    position: relative;
+    margin-top: 75px;
     left: 12.5%;
     width: 75%;
     min-height: 1px;
-    border: 3px solid #fff;
+    color: #232323;
+}
+
+#recipe_image {
+    max-width: 275px;
+    max-height: 275px;
+    box-shadow: 0px 2px 6px 4px rgba(50, 50, 50, 0.64);
+}
+
+#recipe_image_div {
+    float: right;
+    padding: 25px 200px 0px 0px;
+}
+
+#sugestion_div {
+    position: relative;
+    word-wrap: break-word;
+    margin-top: 30px;
+    min-height: 1px;
+    color: #232323;
+    text-align: center;
+}
+
+#type {
+    font-weight: bold;
+    font-size: 30px;
+    text-decoration: underline;
 }
 
 #title {
     font-weight: bold;
-    font-size: 23px;
+    font-size: 27px;
 }
 
 #main_word {
@@ -172,6 +191,11 @@ body {
     bottom: 0;
     color: #FFF;
     background: #232323;
-    height: 7%;
     width: 100%;
+    padding: 10px 0px 10px 0px;
+}
+
+#footer_desc {
+    margin-right: 5px;
+    font-size: 16px;
 }
