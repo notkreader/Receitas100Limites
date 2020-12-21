@@ -40,7 +40,7 @@ body {
     float: left;
     display: block;
     padding: 18px;
-    font-family: "Helvetica";
+    font-family: 'Andika New Basic', sans-serif;
     font-weight: 400;
     font-size: 14px;
     text-align: center;
@@ -66,14 +66,15 @@ body {
 }
 
 #menu input[type=text] {
-    font-size: 21px;
-    width: 89.1%;
+    font-family: 'Andika New Basic', sans-serif;
+    font-size: 20px;
+    width: 85.7%;
     border: none;
 }
 
 #menu .search button {
     float: right;
-    padding: 5.5px 8px;
+    padding: 9.5px 12.1px;
     margin-top: 0;
     margin-right: 0;
     background: #c0c0c0;
@@ -105,19 +106,6 @@ body {
     width: 100%;
 }
 
-#text_area_format {
-    margin-top: 20px;
-    resize: none;
-    width: 15%;
-    min-height: 370px;
-    padding: 10px 10px 0px 20px;
-    background: #606060;
-    border-radius: 3px 3px 3px 3px;
-    font-family: "Helvetica";
-    font-weight: 400;
-    font-size: 14px;
-}
-
 .orange {
     color: #fbc021;
 }
@@ -146,8 +134,8 @@ body {
 }
 
 #recipe_image {
-    max-width: 275px;
-    max-height: 275px;
+    max-width: 250px;
+    max-height: 250px;
     box-shadow: 0px 2px 6px 4px rgba(50, 50, 50, 0.64);
 }
 
@@ -166,22 +154,26 @@ body {
 }
 
 #type {
+    font-family: 'Andika New Basic', sans-serif;
     font-weight: bold;
     font-size: 30px;
     text-decoration: underline;
 }
 
 #title {
+    font-family: 'Andika New Basic', sans-serif;
     font-weight: bold;
     font-size: 27px;
 }
 
 #main_word {
+    font-family: 'Andika New Basic', sans-serif;
     font-weight: bold;
     font-size: 18px;
 }
 
 #desc {
+    font-family: 'Andika New Basic', sans-serif;
     font-size: 18px;
 }
 
@@ -198,4 +190,8 @@ body {
 #footer_desc {
     margin-right: 5px;
     font-size: 16px;
+}
+
+.word_font {
+    font-family: 'Andika New Basic', sans-serif;
 }
