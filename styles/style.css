@@ -9,9 +9,8 @@ body {
 }
 
 #site {
-    min-height: 79%;
+    min-height: 100%;
     position: relative;
-    padding-bottom: 5.8%;
     display: block;
     overflow: hidden;
 }
@@ -89,6 +88,7 @@ body {
 #page {
     width: 100%;
     padding: 15px 0px 0px 0px;
+    padding-bottom: 5%;
 }
 
 .content {
@@ -131,6 +131,7 @@ body {
     width: 75%;
     min-height: 1px;
     color: #232323;
+    border: 3px solid white;
 }
 
 #recipe_image {
@@ -178,6 +179,7 @@ body {
 }
 
 #footer {
+    clear: both;
     text-align: right;
     position: absolute;
     bottom: 0;
