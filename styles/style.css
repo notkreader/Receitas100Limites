@@ -1,198 +1,293 @@
-html,
-body {
-    margin: 0;
-    padding: 0;
-    background-color: #fbc021;
-    font-family: Arial, Helvetica, sans-serif;
-    height: 100%;
-    position: relative;
-}
-
-#site {
-    min-height: 100%;
-    position: relative;
-    display: block;
-    overflow: hidden;
-}
-
-#header {
-    position: relative;
-    width: 100%;
-    padding: 0px 0px 10px 0px;
-}
-
-#banner {
-    width: 100%;
-    box-shadow: 0px 1px 3px 2px rgba(50, 50, 50, 0.64);
-}
-
-#menu {
-    z-index: 500;
-    background-color: #444444;
-    overflow: hidden;
-    border-bottom: 3px solid white;
-    box-shadow: 0px 1px 3px 2px rgba(50, 50, 50, 0.64);
-    text-decoration: none;
-}
-
-#menu a {
-    float: left;
-    display: block;
-    padding: 18px;
-    font-family: 'Andika New Basic', sans-serif;
-    font-weight: 400;
-    font-size: 14px;
-    text-align: center;
-    color: white;
-    text-decoration: none;
-}
-
-#menu a:hover {
-    background-color: #d6d6d6;
-    color: black;
-    text-decoration: none;
-}
-
-#menu a.active {
-    background-color: #ffe08e;
-    color: black;
-    text-decoration: none;
-}
-
-#menu .search {
-    float: right;
-    padding: 13px 13px 0px 0px;
-}
-
-#menu input[type=text] {
-    font-family: 'Andika New Basic', sans-serif;
-    font-size: 20px;
-    width: 85.7%;
-    border: none;
-}
-
-#menu .search button {
-    float: right;
-    padding: 9.5px 12.1px;
-    margin-top: 0;
-    margin-right: 0;
-    background: #c0c0c0;
-    border: none;
-    cursor: pointer;
-}
-
-#menu .search button:hover {
-    background: #ffe08e;
-}
-
-#page {
-    width: 100%;
-    padding: 15px 0px 0px 0px;
-    padding-bottom: 5%;
-}
-
-.content {
-    min-height: 565px;
-    border: 3 solid #FFF;
-}
-
-.sticky+.content {
-    padding-top: 50px;
-}
-
-.sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
-}
-
-.orange {
-    color: #fbc021;
-}
-
-.white {
-    color: white;
-}
-
-.back_grey {
-    background-color: #606060
-}
-
-#all_recipes {
-    display: block;
-    position: relative;
-}
-
-#recipe {
-    position: relative;
-    word-wrap: break-word;
-    margin-top: 75px;
-    left: 12.5%;
-    width: 75%;
-    min-height: 1px;
-    color: #232323;
-}
-
-#recipe_image {
-    max-width: 250px;
-    max-height: 250px;
-    box-shadow: 0px 2px 6px 4px rgba(50, 50, 50, 0.64);
-}
-
-#recipe_image_div {
-    float: right;
-    padding: 25px 200px 0px 0px;
-}
-
-#sugestion_div {
-    position: relative;
-    word-wrap: break-word;
-    margin-top: 30px;
-    min-height: 1px;
-    color: #232323;
-    text-align: center;
-}
-
-#type {
-    font-family: 'Andika New Basic', sans-serif;
-    font-weight: bold;
-    font-size: 30px;
-    text-decoration: underline;
-}
-
-#title {
-    font-family: 'Andika New Basic', sans-serif;
-    font-weight: bold;
-    font-size: 27px;
-}
-
-#main_word {
-    font-family: 'Andika New Basic', sans-serif;
-    font-weight: bold;
-    font-size: 18px;
-}
-
-#desc {
-    font-family: 'Andika New Basic', sans-serif;
-    font-size: 18px;
-}
-
-#footer {
-    clear: both;
-    text-align: right;
-    position: absolute;
-    bottom: 0;
-    color: #FFF;
-    background: #232323;
-    width: 100%;
-    padding: 10px 0px 10px 0px;
-}
-
-#footer_desc {
-    margin-right: 5px;
-    font-size: 16px;
-}
-
-.word_font {
-    font-family: 'Andika New Basic', sans-serif;
-}
+    html,
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: #fbc021;
+        font-family: Arial, Helvetica, sans-serif;
+        height: 100%;
+        position: relative;
+    }
+    
+    #site {
+        min-height: 100%;
+        position: relative;
+        display: block;
+        overflow: hidden;
+    }
+    
+    #header {
+        position: relative;
+        width: 100%;
+        padding: 0px 0px 10px 0px;
+    }
+    
+    #banner {
+        width: 100%;
+        box-shadow: 0px 1px 3px 2px rgba(50, 50, 50, 0.64);
+    }
+    
+    #menu {
+        z-index: 500;
+        background-color: #444444;
+        overflow: hidden;
+        border-bottom: 3px solid white;
+        box-shadow: 0px 1px 3px 2px rgba(50, 50, 50, 0.64);
+        text-decoration: none;
+    }
+    
+    #menu a {
+        float: left;
+        display: block;
+        padding: 18px;
+        font-family: 'Andika New Basic', sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        text-align: center;
+        color: white;
+        text-decoration: none;
+    }
+    
+    #menu a:hover {
+        background-color: #d6d6d6;
+        color: black;
+        text-decoration: none;
+    }
+    
+    #menu a.active {
+        background-color: #ffe08e;
+        color: black;
+        text-decoration: none;
+    }
+    
+    #menu .search {
+        float: right;
+        padding: 13px 13px 0px 0px;
+    }
+    
+    #menu input[type=text] {
+        font-family: 'Andika New Basic', sans-serif;
+        font-size: 20px;
+        width: 85.7%;
+        border: none;
+    }
+    
+    #menu .search button {
+        float: right;
+        padding: 9.5px 12.1px;
+        margin-top: 0;
+        margin-right: 0;
+        background: #c0c0c0;
+        border: none;
+        cursor: pointer;
+    }
+    
+    #menu .search button:hover {
+        background: #ffe08e;
+    }
+    
+    #page {
+        width: 100%;
+        padding: 15px 0px 0px 0px;
+        padding-bottom: 5%;
+    }
+    
+    .content {
+        min-height: 565px;
+        border: 3 solid #FFF;
+    }
+    
+    .sticky+.content {
+        padding-top: 50px;
+    }
+    
+    .sticky {
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+    
+    .orange {
+        color: #fbc021;
+    }
+    
+    .white {
+        color: white;
+    }
+    
+    .back_grey {
+        background-color: #606060
+    }
+    
+    #body_container {
+        display: block;
+        position: relative;
+    }
+    
+    #post_1 {
+        position: relative;
+        word-wrap: break-word;
+        margin-top: 30px;
+        width: 100%;
+        min-height: 1px;
+        color: #232323;
+        text-align: center;
+    }
+    
+    #recipe {
+        position: relative;
+        word-wrap: break-word;
+        margin-top: 75px;
+        left: 12.5%;
+        width: 75%;
+        min-height: 1px;
+        color: #232323;
+    }
+    
+    #recipe_image {
+        max-width: 250px;
+        max-height: 250px;
+        box-shadow: 0px 2px 6px 4px rgba(50, 50, 50, 0.64);
+    }
+    
+    #recipe_image_div {
+        float: right;
+        padding: 25px 200px 0px 0px;
+    }
+    
+    #sugestion_div {
+        position: relative;
+        word-wrap: break-word;
+        margin-top: 30px;
+        min-height: 1px;
+        color: #232323;
+        text-align: center;
+    }
+    
+    #type {
+        font-family: 'Andika New Basic', sans-serif;
+        font-weight: bold;
+        font-size: 30px;
+        text-decoration: underline;
+    }
+    
+    #title {
+        font-family: 'Andika New Basic', sans-serif;
+        font-weight: bold;
+        font-size: 27px;
+    }
+    
+    #main_word {
+        font-family: 'Andika New Basic', sans-serif;
+        font-weight: bold;
+        font-size: 18px;
+    }
+    
+    #desc {
+        font-family: 'Andika New Basic', sans-serif;
+        font-size: 18px;
+    }
+    
+    #footer {
+        clear: both;
+        text-align: right;
+        position: absolute;
+        bottom: 0;
+        color: #FFF;
+        background: #232323;
+        width: 100%;
+        padding: 10px 0px 10px 0px;
+    }
+    
+    #footer_desc {
+        margin-right: 5px;
+        font-size: 16px;
+    }
+    
+    .word_font {
+        font-family: 'Andika New Basic', sans-serif;
+    }
+    
+    textarea {
+        resize: none;
+        vertical-align: middle;
+        font-size: 10px;
+    }
+    
+    #publish {
+        font-family: 'Andika New Basic', sans-serif;
+        font-size: 15px;
+        width: 8%;
+        margin-top: 5px;
+    }
+    
+    #add_image {
+        font-family: 'Andika New Basic', sans-serif;
+        font-size: 15px;
+        width: 8%;
+        margin-top: 5px;
+        margin-right: 30px;
+    }
+    
+    #recipe_type {
+        font-family: 'Andika New Basic', sans-serif;
+        font-size: 15px;
+    }
+    
+    #recipe_name {
+        font-family: 'Andika New Basic', sans-serif;
+        font-size: 15px;
+    }
+    
+    #recipe_time {
+        font-family: 'Andika New Basic', sans-serif;
+        font-size: 15px;
+    }
+    
+    #recipe_ingredients {
+        font-family: 'Andika New Basic', sans-serif;
+        font-size: 15px;
+    }
+    
+    #recipe_preparation {
+        font-family: 'Andika New Basic', sans-serif;
+        font-size: 15px;
+    }
+    
+    #label_for {
+        font-family: 'Andika New Basic', sans-serif;
+        font-size: 15px;
+    }
+    
+    #mail_txt {
+        font-family: 'Andika New Basic', sans-serif;
+        font-size: 15px;
+    }
+    
+    #pass_txt {
+        font-family: 'Andika New Basic', sans-serif;
+        font-size: 15px;
+    }
+    
+    #login_container {
+        position: relative;
+        word-wrap: break-word;
+        margin-top: 150px;
+        width: 100%;
+        min-height: 1px;
+        color: #232323;
+        text-align: center;
+    }
+    
+    #log_in_btn {
+        font-family: 'Andika New Basic', sans-serif;
+        font-size: 15px;
+        width: 263px;
+        margin-top: 5px;
+    }
+    
+    #register_btn {
+        font-family: 'Andika New Basic', sans-serif;
+        font-size: 15px;
+        width: 263px;
+        margin-top: 5px;
+    }
