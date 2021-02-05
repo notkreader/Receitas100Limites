@@ -88,7 +88,7 @@
     #page {
         width: 100%;
         padding: 15px 0px 0px 0px;
-        padding-bottom: 5%;
+        padding-bottom: 150px;
     }
     
     .content {
@@ -213,57 +213,7 @@
         font-size: 10px;
     }
     
-    #publish {
-        font-family: 'Andika New Basic', sans-serif;
-        font-size: 15px;
-        width: 8%;
-        margin-top: 5px;
-    }
-    
-    #add_image {
-        font-family: 'Andika New Basic', sans-serif;
-        font-size: 15px;
-        width: 8%;
-        margin-top: 5px;
-        margin-right: 30px;
-    }
-    
-    #recipe_type {
-        font-family: 'Andika New Basic', sans-serif;
-        font-size: 15px;
-    }
-    
-    #recipe_name {
-        font-family: 'Andika New Basic', sans-serif;
-        font-size: 15px;
-    }
-    
-    #recipe_time {
-        font-family: 'Andika New Basic', sans-serif;
-        font-size: 15px;
-    }
-    
-    #recipe_ingredients {
-        font-family: 'Andika New Basic', sans-serif;
-        font-size: 15px;
-    }
-    
-    #recipe_preparation {
-        font-family: 'Andika New Basic', sans-serif;
-        font-size: 15px;
-    }
-    
-    #label_for {
-        font-family: 'Andika New Basic', sans-serif;
-        font-size: 15px;
-    }
-    
-    #mail_txt {
-        font-family: 'Andika New Basic', sans-serif;
-        font-size: 15px;
-    }
-    
-    #pass_txt {
+    .label_for {
         font-family: 'Andika New Basic', sans-serif;
         font-size: 15px;
     }
@@ -278,16 +228,58 @@
         text-align: center;
     }
     
-    #log_in_btn {
-        font-family: 'Andika New Basic', sans-serif;
+    .btn_login_page {
         font-size: 15px;
-        width: 263px;
+        width: 225px;
         margin-top: 5px;
     }
+    /* Stars rating CSS */
     
-    #register_btn {
+    .star {
+        color: #fbc021;
+        font-size: 25px;
+    }
+    
+    .star::before {
+        content: '\2606';
+        cursor: pointer;
+    }
+    
+    .star.rated::before {
+        content: '\2605';
+    }
+    
+    .stars {
         font-family: 'Andika New Basic', sans-serif;
-        font-size: 15px;
-        width: 263px;
-        margin-top: 5px;
+        counter-reset: rateme 0;
+        font-size: 25px;
+    }
+    
+    .star.rated {
+        counter-increment: rateme 1;
+    }
+    
+    .stars::after {
+        content: counter(rateme) '/5';
+    }
+    
+    input:valid {
+        border: 2px solid #232323;
+    }
+    
+    select:valid {
+        border: 2px solid #232323;
+    }
+    
+    textarea:invalid {
+        border: 2px dashed #232323;
+    }
+    
+    textarea:valid {
+        border: 2px solid #232323;
+    }
+    
+    #add_image {
+        width: 300px;
+        margin-right: 75px;
     }
