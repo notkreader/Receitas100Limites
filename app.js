@@ -19,8 +19,8 @@ var loginRouter = require('./routes/login');
 
 var app = express();
 
-app.set('views', path.join(__dirname, 'html'));
-app.set('views engine', 'html');
+app.set('views', path.join(__dirname, 'views'));
+app.set('views engine', 'pug');
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
