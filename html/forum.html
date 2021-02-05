@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Receitas</title>
+
+    <!--<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>-->
+    <script type="application/javascript" src="../scripts/script.js"></script>
+    <link type="text/css" rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="icon" href="images/Logo.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Andika+New+Basic&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+
+<body onload="AllRecipes.showRecipes(recipesList);">
+    <div id="site">
+        <div id="header">
+            <img id="banner" src="images/banner.png">
+        </div>
+        <div id="menu">
+            <a href="home.html">Página Inicial</a>
+            <a href="entradas.html">Entradas</a>
+            <a href="carne.html">Pratos de Carne</a>
+            <a href="peixe.html">Pratos de Peixe</a>
+            <a href="marisco.html">Pratos de Marisco</a>
+            <a href="vegetariano.html">Pratos Vegetarianos</a>
+            <a href="sobremesas.html">Sobremesas</a>
+            <a href="bebidas.html">Bebidas</a>
+            <a href="forum.html" class="active">Fórum</a>
+            <a href="jogo.html">Mini-Jogo</a>
+            <a href="login.html">Login</a>
+            <div class="search">
+                <form action="/action_page.php">
+                    <input type="text" placeholder="Procure aqui..." name="search ">
+                    <button type="submit"><i class="fa fa-search"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div class="content">
+            <div id="page">
+                <img id="banner" src="images/forum.png">
+                <div id="body_container">
+                    <div id="post_1">
+                        <label for="recipe_type" class="label_for">Tipo de Receita:</label>
+                        <select id="recipe_type" class="label_for">
+                            <option value="" disabled selected>Escolha um tipo</option>
+                            <option value="Entrada">Entrada</option>
+                            <option value="Prato de Carne">Prato de Carne</option>
+                            <option value="Prato de Peixe">Prato de Peixe</option>
+                            <option value="Prato de Marisco">Prato de Marisco</option>
+                            <option value="Prato Vegetariano">Prato Vegetariano</option>
+                            <option value="Sobremesa">Sobremesa</option>
+                            <option value="Bebida">Bebida</option>
+                        </select>
+                        <label for="recipe_name" class="label_for">Nome da Receita:</label>
+                        <textarea id="recipe_name" name="recipe_name" class="label_for" rows="1" cols="40" placeholder="Ex: Arroz de Atum"></textarea>
+                        <label for="recipe_time" class="label_for">Tempo de Confeção:</label>
+                        <textarea id="recipe_time" name="recipe_tipe" class="label_for" rows="1" cols="20" placeholder="Ex: 70 min"></textarea><br>
+                        <label for="recipe_ingredients" class="label_for">Ingredientes da Receita:</label><br>
+                        <textarea id="recipe_ingredients" name="recipe_ingredients" class="label_for" rows="9" cols="90" placeholder="Ex:&#10;- 100g de açúcar&#10;- 1 colher de chá de limão&#10;- sal q.b."></textarea><br>
+                        <label for="recipe_preparation" class="label_for">Preparação da Receita:</label><br>
+                        <textarea id="recipe_preparation" name="recipe_preparation" class="label_for" rows="9" cols="90" placeholder="Ex:&#10;1. Coloque o açúcar e o chá de limão num recipiente.&#10;2. Misture tudo até ficar remoso."></textarea><br>
+                        <div id="add_image_and_publish">
+                            <input id="add_image" name="add_image" class="btn_login_page label_for" type="file" multiple="false" accept="image/*" value="Adicionar Imagem">
+                            <input id="publish" name="publish" class="btn_login_page label_for" type="submit" value="Publicar" onclick="AllRecipes.addRecipe(recipesList)">
+                        </div>
+                    </div>
+                    <div id="recipes"></div>
+                </div>
+            </div>
+            <footer id="footer">
+                <div id="footer_desc">
+                    <label class="label_for">Contacte-nos via email: receitas100limites@gmail.com</label><br>
+                    <label class="label_for">E deixe-nos a sua opinião aqui:</label>
+                    <div class="stars" data-rating="3">
+                        <span class="star">&nbsp;</span>
+                        <span class="star">&nbsp;</span>
+                        <span class="star">&nbsp;</span>
+                        <span class="star">&nbsp;</span>
+                        <span class="star">&nbsp;</span>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script>
+    </script>
+
+</body>
+
+</html>
