@@ -1,52 +1,35 @@
-var createError = require('http-errors');
+var http = require("http");
+var path = require("path");
 var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
-
-var homeRouter = require('./routes/home');
-var entradasRouter = require('./routes/entradas');
-var carneRouter = require('./routes/carne');
-var peixeRouter = require('./routes/peixe');
-var mariscoRouter = require('./routes/marisco');
-var vegetarianoRouter = require('./routes/vegetariano');
-var sobremesasRouter = require('./routes/sobremesas');
-var bebidasRouter = require('./routes/bebidas');
-var forumRouter = require('./routes/forum');
-var jogoRouter = require('./routes/jogo');
-var loginRouter = require('./routes/login');
-//var signupRouter = require('./routes/signup');
-
 var app = express();
 
-app.set('views', path.join(__dirname, 'views'));
-app.set('views engine', 'pug');
-app.use(logger('dev'));
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+var mysql = require('mysql');
 
-app.use('/', homeRouter);
-app.use('/entradas', entradasRouter);
-app.use('/carne', carneRouter);
-app.use('/peixe', peixeRouter);
-app.use('/marisco', mariscoRouter);
-app.use('/vegetariano', vegetarianoRouter);
-app.use('/sobremesas', sobremesasRouter);
-app.use('/bebidas', bebidasRouter);
-app.use('/forum', forumRouter);
-app.use('/jogo', jogoRouter);
-app.use('/login', loginRouter);
-//app.use('/login/signup', signupRouter);
+var connectionMysql = {
+    host: "localhost",
+    user: "root",
+    password: "password_123",
+    database: "cookingdb"
+}
 
-app.use(function(req, res, next) {
-    next(createError(404));
+app.set("views", path.join(__dirname, "public/views"));
+app.set('view engine', 'ejs');
+
+app.use(express.static(path.join(__dirname, "public")));
+
+app.get('/', function(req, res) {
+    res.render('home');
 });
 
-app.use(function(err, req, res, next) {
-    res.locals.message = err.message;
-    res.locals.error = req.app.get('env') === 'development' ? err : {};
-    res.status(err.status || 500);
-    res.render('error');
+
+
+
+/*
+app.set("views", path.resolve(__dirname, "views"));
+app.set("view engine", "ejs");
+
+app.use(express.static("html", { "index": "home.html" })); */
+
+app.listen(8888, function() {
+    console.log("Server running at http://localhost:8888");
 });

@@ -143,3 +143,7 @@ function onDrop(event) {
         .dataTransfer
         .clearData();
 }
+
+function test() {
+    var search = document.getElementById("searchTest");
+}

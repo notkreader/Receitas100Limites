@@ -1,0 +1,48 @@
+<%- include('header'); -%>
+    <div id="menu">
+        <a href="home.html">Página Inicial</a>
+        <a href="entradas.html">Entradas</a>
+        <a href="carne.html">Pratos de Carne</a>
+        <a href="peixe.html">Pratos de Peixe</a>
+        <a href="marisco.html">Pratos de Marisco</a>
+        <a href="vegetariano.html">Pratos Vegetarianos</a>
+        <a href="sobremesas.html">Sobremesas</a>
+        <a href="bebidas.html">Bebidas</a>
+        <a href="forum.html" class="active">Fórum</a>
+        <a href="jogo.html">Mini-Jogo</a>
+        <a href="login.html">Login</a>
+        <%- include('searchbar'); -%>
+    </div>
+    <div class="content">
+        <div id="page">
+            <img id="banner" src="images/forum.png">
+            <div id="body_container">
+                <div id="post_area">
+                    <label for="recipe_type" class="label_for">Tipo de Receita:</label>
+                    <select id="recipe_type" class="label_for">
+                            <option value="" disabled selected>Escolha um tipo</option>
+                            <option value="Entrada">Entrada</option>
+                            <option value="Prato de Carne">Prato de Carne</option>
+                            <option value="Prato de Peixe">Prato de Peixe</option>
+                            <option value="Prato de Marisco">Prato de Marisco</option>
+                            <option value="Prato Vegetariano">Prato Vegetariano</option>
+                            <option value="Sobremesa">Sobremesa</option>
+                            <option value="Bebida">Bebida</option>
+                        </select>
+                    <label for="recipe_name" class="label_for">Nome da Receita:</label>
+                    <textarea id="recipe_name" name="recipe_name" class="label_for" rows="1" cols="40" placeholder="Ex: Arroz de Atum"></textarea>
+                    <label for="recipe_time" class="label_for">Tempo de Confeção:</label>
+                    <textarea id="recipe_time" name="recipe_tipe" class="label_for" rows="1" cols="20" placeholder="Ex: 70 min"></textarea><br>
+                    <label for="recipe_ingredients" class="label_for">Ingredientes da Receita:</label><br>
+                    <textarea id="recipe_ingredients" name="recipe_ingredients" class="label_for" rows="9" cols="90" placeholder="Ex:&#10;- 100g de açúcar&#10;- 1 colher de chá de limão&#10;- sal q.b."></textarea><br>
+                    <label for="recipe_preparation" class="label_for">Preparação da Receita:</label><br>
+                    <textarea id="recipe_preparation" name="recipe_preparation" class="label_for" rows="9" cols="90" placeholder="Ex:&#10;1. Coloque o açúcar e o chá de limão num recipiente.&#10;2. Misture tudo até ficar remoso."></textarea><br>
+                    <div id="add_image_and_publish">
+                        <input id="add_image" name="add_image" class="btn_login_page label_for" type="file" multiple="false" accept="image/*" value="Adicionar Imagem">
+                        <input id="publish" name="publish" class="btn_login_page label_for" type="submit" value="Publicar" onclick="AllRecipes.addRecipe(recipesList)">
+                    </div>
+                </div>
+                <div id="recipes"></div>
+            </div>
+        </div>
+        <%- include('footer'); -%>

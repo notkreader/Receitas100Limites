@@ -19,9 +19,9 @@
 
 <body onload="AllRecipes.showRecipes(recipesList);">
     <div id="site">
-        <div id="header">
+        <header>
             <img id="banner" src="images/banner.png">
-        </div>
+        </header>
         <div id="menu">
             <a href="home.html">Página Inicial</a>
             <a href="entradas.html">Entradas</a>
@@ -35,10 +35,8 @@
             <a href="jogo.html">Mini-Jogo</a>
             <a href="login.html">Login</a>
             <div class="search">
-                <form action="/action_page.php">
-                    <input type="text" placeholder="Procure aqui..." name="search ">
-                    <button type="submit"><i class="fa fa-search"></i>
-                    </button>
+                <input type="text" placeholder="Procure aqui..." name="search" id="searchTest">
+                <button type="submit"><i class="fa fa-search" onclick="test();"></i>
                 </form>
             </div>
         </div>
