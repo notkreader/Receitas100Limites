@@ -1,0 +1,41 @@
+<footer id="footer">
+    <div id="footer_desc">
+        <label class="label_for">Contacte-nos via email: receitas100limites@gmail.com</label><br>
+        <label class="label_for">E deixe-nos a sua opinião aqui:</label>
+        <div class="stars" data-rating="3">
+            <span class="star">&nbsp;</span>
+            <span class="star">&nbsp;</span>
+            <span class="star">&nbsp;</span>
+            <span class="star">&nbsp;</span>
+            <span class="star">&nbsp;</span>
+        </div>
+    </div>
+</footer>
+</div>
+</div>
+</body>
+
+<script>
+    // Get the container element
+    var menuContainer = document.getElementById("menu");
+
+    // Get all buttons with class="btn" inside the container
+    var items = menuContainer.getElementsByClassName("menuItem");
+
+    // Loop through the buttons and add the active class to the current/clicked button
+    for (var i = 0; i < items.length; i++) {
+        items[i].addEventListener("click", function() {
+            var current = document.getElementsByClassName("active");
+
+            // If there's no active class
+            if (current.length > 0) {
+                current[0].className = current[0].className.replace(" active", "");
+            }
+
+            // Add the active class to the current/clicked button
+            this.className += " active";
+        });
+    }
+</script>
+
+</html>

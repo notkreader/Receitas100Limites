@@ -1,21 +1,21 @@
-<%- include('header'); -%>
+<%- include('templates/header'); -%>
     <div id="menu">
-        <a href="home.html">Página Inicial</a>
-        <a href="entradas.html">Entradas</a>
-        <a href="carne.html">Pratos de Carne</a>
-        <a href="peixe.html">Pratos de Peixe</a>
-        <a href="marisco.html">Pratos de Marisco</a>
-        <a href="vegetariano.html">Pratos Vegetarianos</a>
-        <a href="sobremesas.html">Sobremesas</a>
-        <a href="bebidas.html">Bebidas</a>
-        <a href="forum.html">Fórum</a>
-        <a href="jogo.html" class="active">Mini-Jogo</a>
-        <a href="login.html">Login</a>
-        <%- include('searchbar'); -%>
+        <a class="menuItem" href="javascript: info.showHome();" value="Home">Página Inicial</a>
+        <a class="menuItem" href="javascript: info.showEntrada();" value="Entrada">Entradas</a>
+        <a class="menuItem" href="javascript: info.showBebida();">Bebidas</a>
+        <a class="menuItem" href="javascript: info.showCarne();">Pratos de Carne</a>
+        <a class="menuItem" href="javascript: info.showPeixe();">Pratos de Peixe</a>
+        <a class="menuItem" href="javascript: info.showMarisco();">Pratos de Marisco</a>
+        <a class="menuItem" href="javascript: info.showVegetariano();">Pratos Vegetarianos</a>
+        <a class="menuItem" href="javascript: info.showSobremesa();">Sobremesas</a>
+        <a class="menuItem" href="forum">Fórum</a>
+        <a class="menuItem active" href="jogo">Mini-Jogo</a>
+        <a class="menuItem" href="login">Login</a>
+        <%- include('templates/searchbar'); -%>
     </div>
     <div class="content">
         <div id="page">
-            <img id="banner" src="images/mini_jogo.png">
+            <img id="banner2" class="banner" src="images/mini_jogo.png">
             <div id="body_container">
                 <div id="game_area">
                     <label class="game_label_for">O objetivo deste mini-jogo é adivinhar os ingredientes da receita gerada, arrastando os ingredientes</label><br>
@@ -43,4 +43,4 @@
                     <div id="recipes"></div>
                 </div>
             </div>
-            <%- include('footer'); -%>
+            <%- include('templates/footer'); -%>

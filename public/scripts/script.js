@@ -64,7 +64,9 @@ function Recipe(type, name, confectionTime, ingredients, preparation, image) {
     this.image = image;
 }
 
-
+function createRecipe(type, name, confectionTime, ingredients, preparation, image) {
+    return new Recipe(type, name, confectionTime, ingredients, preparation, image);
+}
 
 // Código para dar print nos compos do login
 printLogin = function() {

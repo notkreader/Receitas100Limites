@@ -1,30 +1,30 @@
-<%- include('header'); -%>
+<%- include('templates/header'); -%>
     <div id="menu">
-        <a href="home.html">Página Inicial</a>
-        <a href="entradas.html">Entradas</a>
-        <a href="carne.html">Pratos de Carne</a>
-        <a href="peixe.html">Pratos de Peixe</a>
-        <a href="marisco.html">Pratos de Marisco</a>
-        <a href="vegetariano.html">Pratos Vegetarianos</a>
-        <a href="sobremesas.html">Sobremesas</a>
-        <a href="bebidas.html">Bebidas</a>
-        <a href="forum.html">Fórum</a>
-        <a href="jogo.html">Mini-Jogo</a>
-        <a href="login.html" class="active">Login</a>
-        <%- include('searchbar'); -%>
+        <a class="menuItem" href="javascript: info.showHome();" value="Home">Página Inicial</a>
+        <a class="menuItem" href="javascript: info.showEntrada();" value="Entrada">Entradas</a>
+        <a class="menuItem" href="javascript: info.showBebida();">Bebidas</a>
+        <a class="menuItem" href="javascript: info.showCarne();">Pratos de Carne</a>
+        <a class="menuItem" href="javascript: info.showPeixe();">Pratos de Peixe</a>
+        <a class="menuItem" href="javascript: info.showMarisco();">Pratos de Marisco</a>
+        <a class="menuItem" href="javascript: info.showVegetariano();">Pratos Vegetarianos</a>
+        <a class="menuItem" href="javascript: info.showSobremesa();">Sobremesas</a>
+        <a class="menuItem" href="forum">Fórum</a>
+        <a class="menuItem" href="jogo">Mini-Jogo</a>
+        <a class="menuItem active" href="login">Login</a>
+        <%- include('templates/searchbar'); -%>
     </div>
     <div class="content">
         <div id="page">
             <div id="body_container">
                 <div id="login_container">
                     <label for="mail_txt" class="label_for">Introduza o seu email:</label><br>
-                    <textarea id="mail_txt" name="mail_txt" class="label_for" rows="1" cols="25" placeholder="Ex: 123_abc@mail.pt" required></textarea><br>
+                    <input id="mail_txt" name="mail_txt" class="input_login" rows="1" cols="25" placeholder="Ex: 123_abc@mail.pt" required></textarea><br>
                     <label for="pass_txt" class="label_for">Introduza a sua password:</label><br>
-                    <textarea id="pass_txt" name="pass_txt" class="label_for" rows="1" cols="25" placeholder="Entre 5-20 caracteres" minlength="5" maxlength="20" required></textarea><br>
+                    <input id="pass_txt" name="pass_txt" type="password" class="input_login" rows="1" cols="25" placeholder="Entre 5-20 caracteres" minlength="5" maxlength="20" required></textarea><br>
                     <input id="log_in_btn" name="log_in_btn" class="btn_login_page label_for" type="submit" value="Log In" onclick="printLogin()"><br>
                     <label for="register_txt" class="label_for">Registe-se aqui:</label><br>
-                    <input id="register_btn" name="register_btn" class="btn_login_page label_for" type="submit" value="Registar" onclick="window.location.href='signup.html'"><br>
+                    <input id="register_btn" name="register_btn" class="btn_login_page label_for" type="submit" value="Registar" onclick="window.location.href='signup'"><br>
                 </div>
             </div>
         </div>
-        <%- include('footer'); -%>
+        <%- include('templates/footer'); -%>

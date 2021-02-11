@@ -1,35 +1,21 @@
-var http = require("http");
 var path = require("path");
+//var reqHandlers = require("./reqHandlers");
+var bodyParser = require("body-parser");
 var express = require('express');
 var app = express();
 
-var mysql = require('mysql');
-
-var connectionMysql = {
-    host: "localhost",
-    user: "root",
-    password: "password_123",
-    database: "cookingdb"
-}
+var routes = require("./public/routes/index");
 
 app.set("views", path.join(__dirname, "public/views"));
 app.set('view engine', 'ejs');
 
-app.use(express.static(path.join(__dirname, "public")));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.static("public"));
 
-app.get('/', function(req, res) {
-    res.render('home');
-});
+app.use('/', routes);
 
-
-
-
-/*
-app.set("views", path.resolve(__dirname, "views"));
-app.set("view engine", "ejs");
-
-app.use(express.static("html", { "index": "home.html" })); */
 
 app.listen(8888, function() {
-    console.log("Server running at http://localhost:8888");
+    console.log("Server running at http://localhost:8888/");
 });
